@@ -8,3 +8,8 @@ Witold Cyrek<br>
 Nicholas Nalywayko<br>
 Alexander Arias<br>
 Jignesh Modi<br>
+
+INSTALL
+======
+
+To install after you download please copy-pasta the vendor folder into the site folder.  The vendor folder is the same for all laravel projects.  To generate a project locally in order to get the vendor folder do: composer create-project laravel/laravel --prefer-dist <project directory> and then copy the vendor folder from there to GROUP6 directory
