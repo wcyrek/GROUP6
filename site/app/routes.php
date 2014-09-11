@@ -15,3 +15,13 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::get('users', function()
+{
+	return 'Users!';
+});
+Route::get('scabs', function()
+{
+	$scabs = Scab::all();
+	
+	return View::make('scabs')->with('scabs', $scabs);
+});
