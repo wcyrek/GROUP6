@@ -15,13 +15,9 @@ class CreateSkillsTable extends Migration {
         Schema::create('skills', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-	    $table->integer('value')->default(0);
-	    $table->integer('type_id')->unsigned();
-	    $table->timestamps();
-        });
-
-	  Schema::table('skills', function(Blueprint $table) {
-		 $table->foreign('type_id')->references('id')->on('skilltypes');
+		    $table->integer('value')->default(0);
+		    $table->integer('type_id')->unsigned();
+		    $table->timestamps();
         });
 
     }
