@@ -19,11 +19,8 @@ Route::get('users', function()
 {
 	return 'Users!';
 });
-Route::get('scabs', function()
-{
-	$scabs = Scab::all();
-	
-	return View::make('scabs')->with('scabs', $scabs);
-});
+//SKills
+Route::get('skills', array('as'=>'skills', 'uses'=>'skills@index'));
+Route::get('skill/(:any)', array('as'=>'skill', 'uses'=>'skills@view'));
 
 Route::get('login/{username}/{password}', 'LoginController@login');

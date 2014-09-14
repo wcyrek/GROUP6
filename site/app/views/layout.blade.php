@@ -1,6 +1,9 @@
 <html>
+	<head>
+		@yield('title')
+	</head>
 	<body>
-		<h1>Laravel French Start</h1>
+		<h1>Welcome:</h1>
 		
 		@yield('content')
 	</body>
