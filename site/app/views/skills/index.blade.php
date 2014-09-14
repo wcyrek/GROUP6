@@ -8,7 +8,7 @@
 	<h1>This is the view of all skills:</h1>
 	<ul>
 	@foreach($skills as $skill)
-		<li>{{ $skill->name }}</li>
+		<li>{{ HTML::linkRoute('skill', $skill->name, array($skill->id)) }}</li>
 	@endforeach
 	</ul>
 @endsection
