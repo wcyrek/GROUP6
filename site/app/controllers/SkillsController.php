@@ -2,6 +2,8 @@
 
 class SkillsController extends BaseController {
 	
+	public $restful = true;
+	
 	public function getIndex() {
 		$skills = Skill::all();
 		

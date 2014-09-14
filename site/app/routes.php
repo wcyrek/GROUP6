@@ -19,8 +19,8 @@ Route::get('users', function()
 {
 	return 'Users!';
 });
-//SKills
-Route::get('skills', array('as'=>'skills', 'uses'=>'skills@index'));
-Route::get('skill/(:any)', array('as'=>'skill', 'uses'=>'skills@view'));
+//Skills
+Route::get('skills', array('as'=>'skills', 'uses'=>'SkillsController@getIndex'));
+Route::get('skill/{id}', array('as'=>'skill', 'uses'=>'SkillsController@getView'));
 
 Route::get('login/{username}/{password}', 'LoginController@login');

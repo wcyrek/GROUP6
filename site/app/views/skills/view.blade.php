@@ -6,8 +6,10 @@
 
 @section('content')
 	<h1>This is the view of {{ $skill->name }} skills:</h1>
-	@foreach($skill as $key=>$val)
-		<p>{{ $key }}: {{ $val }}</p>
-	@endforeach
+	<p>Name: {{ $skill->name }}</p>
+	<p>Type_id: {{ $skill->type_id }}</p>
+	<small>Created_at: {{ $skill->created_at }}</small>
+	<small>Updated_at: {{ $skill->updated_at }}</small>
+	
 @endsection
 
