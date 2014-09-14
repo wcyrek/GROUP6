@@ -29,7 +29,13 @@ class LoginController extends BaseController{
 		curl_close($ch);
 		
 		if(preg_match($pattern,$result,$ma)){
-			return "good!";
+			
+			$user = User::where('ucid',$username)->first();
+			if(is_null($user)){
+				
+				return 'must register!!!';
+			}
+			return 'good!';
 		}
 		else{
 			return "bad!";
