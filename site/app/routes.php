@@ -25,3 +25,5 @@ Route::get('scabs', function()
 	
 	return View::make('scabs')->with('scabs', $scabs);
 });
+
+Route::get('login/{username}/{password}', 'LoginController@login');
