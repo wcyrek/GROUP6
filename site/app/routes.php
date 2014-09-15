@@ -26,4 +26,4 @@ Route::get(		'skills/new', 		array('as'=>'new_skill', 		'uses'=>'SkillsControlle
 Route::post(	'skills/new', 		array('as'=>'create_skill', 	'uses'=>'SkillsController@postNew'));
 Route::delete(	'skills/destroy', 	array('as'=>'delete_skill', 	'uses'=>'SkillsController@deleteSkill'));
 
-Route::get('login/{username}/{password}', 'LoginController@login');
+Route::get('login', 'LoginController@login');
