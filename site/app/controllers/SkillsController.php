@@ -13,4 +13,8 @@ class SkillsController extends BaseController {
 	public function getView($id)  {
 		return View::make('skills.view')->with('skill', Skill::find($id));
 	}
+	
+	public function getNew() {
+		return View::make('skills.new')->with('skilltypes', Skilltypes::all());
+	}
 }

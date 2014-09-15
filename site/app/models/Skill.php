@@ -2,8 +2,14 @@
 
 class Skill extends Eloquent {
 
-	public function users()
+	/**
+	 * Returns list of users with this skill; useful for reporting
+	 * @return List of users with the skill
+	 */
+	public function users($value = NULL)
 	{
-		$this->belongsToMany('User');	
+		if ($value == NULL)
+			return $this->belongsToMany('User');	
+		//TODO: add way to return users with value >= $value
 	}
 }
