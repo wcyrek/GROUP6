@@ -30,4 +30,7 @@ Route::delete(	'skills/destroy', 	array('as'=>'delete_skill', 	'uses'=>'SkillsCo
 Route::get('skilltypes', array('as'=>'skilltypes', 'uses'=>'SkillTypesController@getIndex'));
 Route::get('skilltypes/{id}', array('as'=>'skilltypes', 'uses'=>'SkillTypesController@getView'));
 
+//Admin
+Route::get('admin', array('as'=>'admin', 'uses'=>'AdminController@getIndex'));
+
 Route::get('login', 'LoginController@login');

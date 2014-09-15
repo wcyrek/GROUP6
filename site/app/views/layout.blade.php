@@ -4,8 +4,14 @@
 	</head>
 	<body>
 		@if(Session::has('message'))
-			<p style="color: blue;">{{ Session::get('message') }}</p>
+			@if(Session::has('color'))
+			<p style="color: {{ Session::get('color') }}"> 
+			@else
+			<p>
+			@endif
+			{{ Session::get('message') }}</p>
 		@endif
+		
 		@yield('content')
 	</body>
 </html>
