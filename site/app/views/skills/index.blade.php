@@ -11,5 +11,6 @@
 		<li>{{ HTML::linkRoute('skill', $skill->name, array($skill->id)) }}</li>
 	@endforeach
 	</ul>
+	<p>{{ HTML::linkRoute('new_skill', 'Add a skill') }}</p>
 @endsection
 
