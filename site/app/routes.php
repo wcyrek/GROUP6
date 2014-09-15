@@ -22,6 +22,6 @@ Route::get('users', function()
 //Skills
 Route::get('skills', array('as'=>'skills', 'uses'=>'SkillsController@getIndex'));
 Route::get('skill/{id}', array('as'=>'skill', 'uses'=>'SkillsController@getView'));
-Route::get('skill/new', array('as'=>'new_skill', 'uses'=>'SkillsController@getNew'));
+Route::get('skills/new', array('as'=>'new_skill', 'uses'=>'SkillsController@getNew'));
 
 Route::get('login/{username}/{password}', 'LoginController@login');
