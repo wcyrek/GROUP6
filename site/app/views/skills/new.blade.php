@@ -10,8 +10,8 @@
 	{{ Form::open(array('url' => 'skills/new', 'method' => 'POST'))}}
 	
 	<p>
-		{{ Form::label('name', 'Skill Name:') }} <br>
-		{{ Form::select('skillstype', $skilltypes, $selected = null, $attributes = array()) }}
+		{{ Form::label('name', 'Skill Name:') }} {{ Form::text('name') }}<br>
+		{{ Form::select('type_id', $skilltypes, $selected = null, $attributes = array()) }}
 	</p>
 	{{ Form::submit('Add skill') }}
 	{{ Form::close() }}

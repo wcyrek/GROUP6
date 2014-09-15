@@ -15,23 +15,40 @@ class SkillsController extends BaseController {
 	 * This action shows details of a skill with given id
 	 * @param unknown $id id of the skill to be displayed
 	 */
-	public function getView($id)  {
+	public function getSkill($id) {
 		return View::make('skills.view')->with('skill', Skill::find($id));
+	}
+	
+	/** 
+	 * This action deletes a skill from database
+	 * @param unknown $id id of skill to be deleted
+	 */
+	public function deleteSkill() {
+		Skill::find(Input::get('id'))->delete();
+		return  Redirect::route('skills')->with('message', 'You have successfully deleted a skill!')->with('color', 'red');
 	}
 	
 	/**
 	 * This action is called to create a form for new skill
 	 */
 	public function getNew() {
-		return View::make('skills.new')->with('skilltypes', Skilltypes::all());
+		
+		$skilltypes = array();
+		foreach (Skilltypes::all() as $skill) {
+			$skilltypes[$skill->id] = $skill->name;
+		}
+		return View::make('skills.new')->with('skilltypes', $skilltypes);
 	}
 	
 	/**
 	 * This action handles inserting a new skill to DB
 	 */
 	public function postNew() {
-		//TODO: add logic to insert new skill
-		
-		return View::make('skills.index')->with('skills', Skill::all());
+
+		Skill::create(array(
+			'name'=>Input::get('name'),
+			'type_id'=>Input::get('type_id')
+		));
+		return Redirect::route('skills')->with('message', 'You have successfully added a skill!');
 	}
 }

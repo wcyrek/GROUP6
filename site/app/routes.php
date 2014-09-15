@@ -21,7 +21,8 @@ Route::get('users', function()
 });
 //Skills
 Route::get('skills', array('as'=>'skills', 'uses'=>'SkillsController@getIndex'));
-Route::get('skill/{id}', array('as'=>'skill', 'uses'=>'SkillsController@getView'));
+Route::get('skill/{id}', array('as'=>'skill', 'uses'=>'SkillsController@getSkill'));
+Route::delete('skills/destroy', array('as'=>'delete_skill', 'uses'=>'SkillsController@deleteSkill'));
 Route::get('skills/new', array('as'=>'new_skill', 'uses'=>'SkillsController@getNew'));
 Route::post('skills/new', array('as'=>'create_skill', 'uses'=>'SkillsController@postNew'));
 
