@@ -25,6 +25,7 @@ Route::get(		'skill/{id}', 		array('as'=>'skill', 			'uses'=>'SkillsController@g
 Route::get(		'skills/new', 		array('as'=>'new_skill', 		'uses'=>'SkillsController@getNew'));
 Route::post(	'skills/new', 		array('as'=>'create_skill', 	'uses'=>'SkillsController@postNew'));
 Route::delete(	'skills/destroy', 	array('as'=>'delete_skill', 	'uses'=>'SkillsController@deleteSkill'));
+Route::get(		'badges', 			array('as'=>'badges', 			'uses'=>'SkillsController@getBadges'));
 
 //Skill Types
 Route::get('skilltypes', array('as'=>'skilltypes', 'uses'=>'SkillTypesController@getIndex'));

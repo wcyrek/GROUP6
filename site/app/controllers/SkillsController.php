@@ -51,4 +51,9 @@ class SkillsController extends BaseController {
 		));
 		return Redirect::route('skills')->with('message', 'You have successfully added a skill!');
 	}
+	
+	public function getBadges() {
+	
+		return View::make('skills.badge')->with('skills', Skill::all());
+	}
 }
