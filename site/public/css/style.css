@@ -17,6 +17,42 @@
 .badge_caption {
 	
 }
+
+.skill_1 {
+	background-image: radial-gradient(center center, circle cover, #457FB5, #1a160d);
+	background-image: -o-radial-gradient(center center, circle cover, #457FB5, #1a160d);
+	background-image: -ms-radial-gradient(center center, circle cover, #457FB5, #1a160d);
+	background-image: -moz-radial-gradient(center center, circle cover, #457FB5, #1a160d);
+	background-image: -webkit-radial-gradient(center center, circle cover, #457FB5, #1a160d);
+}
+.skill_2 {
+	background-image: radial-gradient(center center, circle cover, #B54545, #1a160d);
+	background-image: -o-radial-gradient(center center, circle cover, #B54545, #1a160d);
+	background-image: -ms-radial-gradient(center center, circle cover, #B54545, #1a160d);
+	background-image: -moz-radial-gradient(center center, circle cover, #B54545, #1a160d);
+	background-image: -webkit-radial-gradient(center center, circle cover, #B54545, #1a160d);
+}
+.skill_3 {
+	background-image: radial-gradient(center center, circle cover, #45B597, #1a160d);
+	background-image: -o-radial-gradient(center center, circle cover, #45B597, #1a160d);
+	background-image: -ms-radial-gradient(center center, circle cover, #45B597, #1a160d);
+	background-image: -moz-radial-gradient(center center, circle cover, #45B597, #1a160d);
+	background-image: -webkit-radial-gradient(center center, circle cover, #45B597, #1a160d);
+}
+.skill_4 {
+	background-image: radial-gradient(center center, circle cover, #A8B545, #1a160d);
+	background-image: -o-radial-gradient(center center, circle cover, #A8B545, #1a160d);
+	background-image: -ms-radial-gradient(center center, circle cover, #A8B545, #1a160d);
+	background-image: -moz-radial-gradient(center center, circle cover, #A8B545, #1a160d);
+	background-image: -webkit-radial-gradient(center center, circle cover, #A8B545, #1a160d);
+}
+.skill_5 {
+	background-image: radial-gradient(center center, circle cover, #AE45B5, #1a160d);
+	background-image: -o-radial-gradient(center center, circle cover, #AE45B5, #1a160d);
+	background-image: -ms-radial-gradient(center center, circle cover, #AE45B5, #1a160d);
+	background-image: -moz-radial-gradient(center center, circle cover, #AE45B5, #1a160d);
+	background-image: -webkit-radial-gradient(center center, circle cover, #AE45B5, #1a160d);
+}
 .noselect {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
