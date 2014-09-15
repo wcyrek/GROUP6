@@ -20,18 +20,23 @@
 
 .skill_1 {
 	background-color: #457FB5;
+	border-color: #3B6FA0;
 }
 .skill_2 {
 	background-color: #B54545;
+	border-color: #A94242;
 }
 .skill_3 {
 	background-color: #45B597;
+	border-color: #3C9C82;
 }
 .skill_4 {
 	background-color: #A8B545;
+	border-color: #909B3C;
 }
 .skill_5 {
 	background-color: #AE45B5;
+	border-color: #9B41A1;
 }
 .noselect {
 	-webkit-touch-callout: none;
