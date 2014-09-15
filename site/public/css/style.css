@@ -10,7 +10,7 @@
 	height: 80px;
 	line-height: 80px;
 	border-radius: 40px;
-	border: 1px solid grey;
+	border: 1x solid grey;
 	text-align: center;
 	display: inline-block;
 }
@@ -19,39 +19,19 @@
 }
 
 .skill_1 {
-	background-image: radial-gradient(center center, circle cover, #457FB5, #1a160d);
-	background-image: -o-radial-gradient(center center, circle cover, #457FB5, #1a160d);
-	background-image: -ms-radial-gradient(center center, circle cover, #457FB5, #1a160d);
-	background-image: -moz-radial-gradient(center center, circle cover, #457FB5, #1a160d);
-	background-image: -webkit-radial-gradient(center center, circle cover, #457FB5, #1a160d);
+	background-color: #457FB5;
 }
 .skill_2 {
-	background-image: radial-gradient(center center, circle cover, #B54545, #1a160d);
-	background-image: -o-radial-gradient(center center, circle cover, #B54545, #1a160d);
-	background-image: -ms-radial-gradient(center center, circle cover, #B54545, #1a160d);
-	background-image: -moz-radial-gradient(center center, circle cover, #B54545, #1a160d);
-	background-image: -webkit-radial-gradient(center center, circle cover, #B54545, #1a160d);
+	background-color: #B54545;
 }
 .skill_3 {
-	background-image: radial-gradient(center center, circle cover, #45B597, #1a160d);
-	background-image: -o-radial-gradient(center center, circle cover, #45B597, #1a160d);
-	background-image: -ms-radial-gradient(center center, circle cover, #45B597, #1a160d);
-	background-image: -moz-radial-gradient(center center, circle cover, #45B597, #1a160d);
-	background-image: -webkit-radial-gradient(center center, circle cover, #45B597, #1a160d);
+	background-color: #45B597;
 }
 .skill_4 {
-	background-image: radial-gradient(center center, circle cover, #A8B545, #1a160d);
-	background-image: -o-radial-gradient(center center, circle cover, #A8B545, #1a160d);
-	background-image: -ms-radial-gradient(center center, circle cover, #A8B545, #1a160d);
-	background-image: -moz-radial-gradient(center center, circle cover, #A8B545, #1a160d);
-	background-image: -webkit-radial-gradient(center center, circle cover, #A8B545, #1a160d);
+	background-color: #A8B545;
 }
 .skill_5 {
-	background-image: radial-gradient(center center, circle cover, #AE45B5, #1a160d);
-	background-image: -o-radial-gradient(center center, circle cover, #AE45B5, #1a160d);
-	background-image: -ms-radial-gradient(center center, circle cover, #AE45B5, #1a160d);
-	background-image: -moz-radial-gradient(center center, circle cover, #AE45B5, #1a160d);
-	background-image: -webkit-radial-gradient(center center, circle cover, #AE45B5, #1a160d);
+	background-color: #AE45B5;
 }
 .noselect {
 	-webkit-touch-callout: none;
