@@ -10,9 +10,13 @@
 	height: 80px;
 	line-height: 80px;
 	border-radius: 40px;
-	border: 2px solid grey;
+	border: 3px solid grey;
 	text-align: center;
 	display: inline-block;
+	color: white;
+	font-weight: bold;
+	font-family: sans-serif;
+	
 }
 .badge_caption {
 	
