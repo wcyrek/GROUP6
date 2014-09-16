@@ -21,6 +21,7 @@
 	</a>
 	@endforeach
 	</div>
-	<br>{{ HTML::linkRoute('skilltypes', 'Back to skilltypes') }}
+	<p>{{ HTML::linkRoute('skilltypes', 'Back to skilltypes') }}</p>
+	<p>{{ HTML::linkRoute('admin', 'Back to Admin menu') }}</p>
 @endsection
 

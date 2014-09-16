@@ -12,5 +12,6 @@
 	@endforeach
 	</ul>
 	<p>{{ HTML::linkRoute('new_skilltype', 'Add a skill type') }}</p>
+	<p>{{ HTML::linkRoute('admin', 'Back to Admin menu') }}</p>
 @endsection
 
