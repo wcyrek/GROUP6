@@ -9,9 +9,12 @@ class SkillTypesController extends BaseController {
 		
 		return View::make('skilltypes.index')->with('skilltypes', $skilltypes);
 	}
-	
-	public function getView($id)  {
-		return View::make('skilltypes.view')->with('skilltypes', SkillType::find($id));
+	/**
+	 * This action shows the details of a skilltype
+	 * @param unknown $id
+	 */
+	public function getSkilltype($id)  {
+		return View::make('skilltypes.view')->with('skilltype', SkillType::find($id));
 	}
 	
 	/**
