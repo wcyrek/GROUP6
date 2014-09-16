@@ -9,6 +9,7 @@
 	
 	{{ Form::open(array('action' => 'LoginController@postLogin')) }}
     	<p>
+    	
     		UCID:     {{ Form::text('username') }}<br>
     		Password: {{ Form::password('password') }}
 			

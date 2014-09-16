@@ -1,5 +1,7 @@
 <?php
 use  App\Controller\Helper\Bounce;
+use  App\Controller\Helper\Register;
+
 class LoginController extends BaseController{
 	
 	function postLogin(){
@@ -12,10 +14,19 @@ class LoginController extends BaseController{
 			$user = User::where('ucid',$ucid)->first();
 			if(is_null($user)){
 				//TODO:redirect to register form flshing ucid
-				return "must register";
+				Register::createUser($ucid);
+				$user = User::where('ucid',$ucid)->first();
 			}
+			
 			//TODO:user logins, redirect according to access level
-			return "good";
+			if($user['admin'] == 2)
+			{
+				return Redirect::to('admin.index');
+			}
+			else if($user['admin'] == 0)
+			{
+				return Redirect::to('user.index');
+			}		
 		}
 		else 
 		{

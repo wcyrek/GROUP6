@@ -21,7 +21,8 @@ class CreateUsersTable extends Migration {
 			$table->string('last_name');
 			$table->string('address');
 			$table->string('phone',15);
-			$table->string('mail');
+			$table->string('email');
+			$table->timestamps();
 		});
 	}
 

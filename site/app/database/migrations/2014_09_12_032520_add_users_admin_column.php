@@ -15,7 +15,7 @@ class AddUsersAdminColumn extends Migration {
 	{
 		Schema::table('users', function($table)
 		{
-			$table->boolean('admin');			
+			$table->integer('admin')->default(0);			
 		});
 	}
 
