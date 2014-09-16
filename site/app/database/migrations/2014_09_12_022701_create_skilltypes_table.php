@@ -12,14 +12,14 @@ class CreateSkillTypesTable extends Migration {
      */
     public function up()
     {
-        Schema::create('skilltypes', function(Blueprint $table) {
+        Schema::create('skill_types', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name');
         });
         
 
         Schema::table('skills', function(Blueprint $table) {
-        	$table->foreign('type_id')->references('id')->on('skilltypes')->onDelete('cascade')->onUpdate('cascade');
+        	$table->foreign('type_id')->references('id')->on('skill_types')->onDelete('cascade')->onUpdate('cascade');
         });
 
     }
@@ -31,7 +31,7 @@ class CreateSkillTypesTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('skilltypes');
+        Schema::drop('skill_types');
     }
 
 }

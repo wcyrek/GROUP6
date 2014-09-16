@@ -14,7 +14,7 @@ class PopulateSomeSkills extends Migration {
 	{
 		$now = date('Y-m-d H:i:s');
 		
-		$id = DB::table('skilltypes')->insertGetId(array(
+		$id = DB::table('skill_types')->insertGetId(array(
 			'name'=>'Programming'
 		));
 		
@@ -54,7 +54,7 @@ class PopulateSomeSkills extends Migration {
 	 */
 	public function down()
 	{
-		DB::table('skilltypes')->where('name', '=', 'Programming')->delete();
+		DB::table('skill_types')->where('name', '=', 'Programming')->delete();
 	}
 
 }
