@@ -38,5 +38,6 @@ Route::delete(	'skilltypess/destroy', 	array('as'=>'delete_skilltype', 	'uses'=>
 Route::get('admin', array('as'=>'admin', 'uses'=>'AdminController@getIndex'));
 
 //Login
-Route::get('login', 'LoginController@getLogin');
-Route::post('login', 'LoginController@postLogin');
+Route::get('login', 'LoginController@getLogin')->before('guest');
+Route::post('login', 'LoginController@postLogin')->before('guest');
+Route::get('logout', 'LoginController@getLogout')->before('auth');
