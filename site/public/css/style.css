@@ -3,7 +3,9 @@
 	margin: 0;
 	padding: 0;
 }
-
+#badges a {
+	text-decoration: none;
+}
 .badge {
 	width: 80px;
 	height: 80px;
@@ -15,10 +17,11 @@
 	color: white;
 	font-weight: bold;
 	font-family: sans-serif;
+	cursor: pointer;
 	
 }
 .badge_caption {
-	
+	cursor: pointer;
 }
 
 .skill_1 {

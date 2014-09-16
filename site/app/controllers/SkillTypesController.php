@@ -40,7 +40,7 @@ class SkillTypesController extends BaseController {
 	 */
 	public function postNew() {
 	
-		SkillTypes::create(array(
+		SkillType::create(array(
 			'name'=>Input::get('name')
 		));
 		return Redirect::route('skilltypes')->with('message', 'You have successfully added a skill type!');
