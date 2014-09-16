@@ -7,8 +7,8 @@
 @section('content')
 	<h1>Skill Types:</h1>
 	<ul>
-	@foreach($skilltypes as $st)
-		<li>{{ HTML::linkRoute('skilltype', $st->name, array($st->id)) }}</li>
+	@foreach($skilltypes as $skilltype)
+		<li>{{ HTML::linkRoute('skilltype', $skilltype->name, array($skilltype->id)) }}</li>
 	@endforeach
 	</ul>
 	<p>{{ HTML::linkRoute('new_skill', 'Add a skill type') }}</p>
