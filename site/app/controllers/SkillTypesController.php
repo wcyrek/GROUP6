@@ -14,8 +14,8 @@ class SkillTypesController extends BaseController {
 	 * @param unknown $id
 	 */
 	public function getSkilltype($id)  {
-		$skills = SkillType::find($id)->skills;
-		return View::make('skilltypes.view')->with('skilltype', SkillType::find($id)->with('skills', array()));
+		$skills = Skill::where('type_id', $id)->get();
+		return View::make('skilltypes.view')->with('skilltype', SkillType::find($id))->with('skills', $skills);
 	}
 	
 	/**

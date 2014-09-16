@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link rel="icon" type="image/png" href="img/ncert.png" />
-		<link rel=StyleSheet href="css/style.css" type="text/css" media=screen>
+		{{HTML::style('css/style.css')}}
 		@yield('title')
 	</head>
 	<body>
