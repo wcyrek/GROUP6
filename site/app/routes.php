@@ -29,7 +29,7 @@ Route::get(		'badges', 			array('as'=>'badges', 			'uses'=>'SkillsController@get
 
 //Skill Types
 Route::get('skilltypes', array('as'=>'skilltypes', 'uses'=>'SkillTypesController@getIndex'));
-Route::get('skilltypes/{id}', array('as'=>'skilltypes', 'uses'=>'SkillTypesController@getView'));
+Route::get('skilltype/{id}', array('as'=>'skilltype', 'uses'=>'SkillTypesController@getView'));
 
 //Admin
 Route::get('admin', array('as'=>'admin', 'uses'=>'AdminController@getIndex'));
