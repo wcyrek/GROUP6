@@ -12,7 +12,11 @@ class Skill extends Eloquent {
 	public function users($value = NULL)
 	{
 		if ($value == NULL)
-			return $this->belongsToMany('User');	
+			return $this->belongsToMany('User')->withPivot('value');	
 		//TODO: add way to return users with value >= $value
+	}
+	public function skilltype()
+	{
+		return $this->belongsTo('SkillType');
 	}
 }
