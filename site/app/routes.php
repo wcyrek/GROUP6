@@ -28,8 +28,11 @@ Route::delete(	'skills/destroy', 	array('as'=>'delete_skill', 	'uses'=>'SkillsCo
 Route::get(		'badges', 			array('as'=>'badges', 			'uses'=>'SkillsController@getBadges'));
 
 //Skill Types
-Route::get('skilltypes', array('as'=>'skilltypes', 'uses'=>'SkillTypesController@getIndex'));
-Route::get('skilltype/{id}', array('as'=>'skilltype', 'uses'=>'SkillTypesController@getView'));
+Route::get(		'skilltypes', 			array('as'=>'skilltypes', 			'uses'=>'SkillTypesController@getIndex'));
+Route::get(		'skilltype/{id}', 		array('as'=>'skilltype', 			'uses'=>'SkillTypesController@getView'));
+Route::get(		'skilltypes/new', 		array('as'=>'new_skilltype', 		'uses'=>'SkillTypesController@getNew'));
+Route::post(	'skilltypes/new', 		array('as'=>'create_skilltype', 	'uses'=>'SkillTypesController@postNew'));
+Route::delete(	'skilltypess/destroy', 	array('as'=>'delete_skilltype', 	'uses'=>'SkillTypesController@deleteSkill'));
 
 //Admin
 Route::get('admin', array('as'=>'admin', 'uses'=>'AdminController@getIndex'));
