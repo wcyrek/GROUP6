@@ -14,9 +14,11 @@
 	<h2>Skills belonging to this type:</h2>
 	<div id="badges">
 	@foreach($skills as $skill)
-	<div id="{{ $skill->id }}" class="noselect badge skill_{{ $skill->id }}">
-		<label class="badge_caption">{{ $skill->name }}</label>
-	</div>
+	<a href="../skill/{{ $skill->id }}">
+		<div id="{{ $skill->id }}" class="noselect badge skill_{{ $skill->id }}">
+			<label class="badge_caption">{{ $skill->name }}</label>
+		</div>
+	</a>
 	@endforeach
 	</div>
 	<br>{{ HTML::linkRoute('skilltypes', 'Back to skilltypes') }}

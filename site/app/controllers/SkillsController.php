@@ -34,7 +34,7 @@ class SkillsController extends BaseController {
 	public function getNew() {
 		
 		$skilltypes = array();
-		foreach (SkillTypes::all() as $skill) {
+		foreach (SkillType::all() as $skill) {
 			$skilltypes[$skill->id] = $skill->name;
 		}
 		return View::make('skills.new')->with('skilltypes', $skilltypes);
