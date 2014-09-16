@@ -7,9 +7,9 @@
 @section('content')
 	<h1>Please login:</h1>
 	
-	{{ Form::open(array('url' => 'LoginController@postLogin')) }}
+	{{ Form::open(array('action' => 'LoginController@postLogin')) }}
     	<p>
-    		UCID: {{ Form::text('username') }}<br>
+    		UCID:     {{ Form::text('username') }}<br>
     		Password: {{ Form::password('password') }}
 			
 		</p>

@@ -34,4 +34,6 @@ Route::get('skilltypes/{id}', array('as'=>'skilltypes', 'uses'=>'SkillTypesContr
 //Admin
 Route::get('admin', array('as'=>'admin', 'uses'=>'AdminController@getIndex'));
 
+//Login
 Route::get('login', 'LoginController@getLogin');
+Route::post('login', 'LoginController@postLogin');
