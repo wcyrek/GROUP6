@@ -24,9 +24,10 @@
 .skill_1 {
 	background-color: #457FB5;
 	border-color: #3B6FA0;
-	background-image: url(img/star_5.png);
+	background-image: url(../img/star_5.png);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: 80px 80px;
 	
 }
 .skill_2 {
