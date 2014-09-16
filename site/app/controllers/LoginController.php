@@ -2,7 +2,7 @@
 use  App\Controller\Helper\Bounce;
 class LoginController extends BaseController{
 	
-	function login(){
+	function postLogin(){
 		if(!Input::has('username') ||!Input::has('password') ){
 			return Redirect::to('/');
 		}
@@ -22,6 +22,11 @@ class LoginController extends BaseController{
 			//TODO: redirect back to login view
 			return "bad!";
 		}
+	}
+	
+	function getLogin(){
+		
+		return View::make('login');
 	}
 	
 }
