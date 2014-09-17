@@ -17,5 +17,11 @@
 	</p>
 	<small>Created_at: {{ $skill->created_at }}</small>
 	<small>Updated_at: {{ $skill->updated_at }}</small>
+	<br />
+	<br />
+	<p><b>Users with this skill:<br /></b>
+	@foreach($users as $user)
+	 {{ $user->first_name }}, {{ $user->last_name }} <br /> </p>
+	@endforeach
 @endsection
 
