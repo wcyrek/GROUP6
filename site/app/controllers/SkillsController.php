@@ -17,9 +17,11 @@ class SkillsController extends BaseController {
 	 */
 	public function getSkill($id) {
 		$skill = Skill::find($id);
+		$users = DB::table('users')->join('user_skill', 'users.id', '=', 'user_skill.user_id')->where('user_skill.skill_id', '=', $id)->get();
+		
 		return View::make('skills.view')
 			->with('skill', $skill)
-			->with('skilltype', Skilltype::find($skill->type_id));
+			->with('skilltype', Skilltype::find($skill->type_id))->with('users', $users);
 	}
 	
 	/** 
