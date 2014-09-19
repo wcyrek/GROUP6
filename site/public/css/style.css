@@ -57,3 +57,72 @@
 	-ms-user-select: none;
 	user-select: none;
 }
+.out_container {
+	background-color : black
+}
+.header {
+	background-color: black; 
+	background-position:relative;
+	color: white;
+	width: auto ; 
+	height:100px ;
+	font-family: Comic Sans MS,Helvetica, Arial, sans-serif;
+	font-size : 45px;
+	font-weight: 900 ;
+	text-align : center;
+	top:0%;
+	left:0%;
+	overflow-x:0px;
+}
+.container {
+	width :auto; 
+	height : auto; 
+	padding : none; 
+	margin-left:0px;
+	margin-right:0px; 
+}
+.login_form {
+	font-family: Comica Sans MS, Helvetica, Arial, sans-serif;
+	font-style: Bold;
+	color: black;
+	font-size : auto;
+	position:absolute;
+	top:45%;
+	left:45%;
+	width:400px;
+	height:200px;
+	z-index:15;
+
+	text-align:center;
+	margin:-100px 0 0 -150px;
+
+	border: thin solid red ;
+	border-width: 3px;">
+}
+.menu_div {
+	width:200px;
+	float:left;
+	margin: 10px;
+	background: white;
+	-moz-border-radius:10px 10px 10px 10px;
+	-webkit-border-radius:10px 10px 10px 10px;
+	border-radius:10px 10px 10px 10px;box-shadow:0px 2px 5px #888888;
+}
+.menu_div_header{width:192px;
+	float:left;
+	background: #00BFFF;
+	height:30px;
+	font-size: 14px;
+	color:white;padding: 4px ;
+	line-height: 30px;
+}
+.menu_div_content{
+	width:200px;
+	float:left;
+	color :black ;
+	font-style:bold;
+}
+.menu_div_content.li{
+	color :black ;
+	font-style:bold;
+}

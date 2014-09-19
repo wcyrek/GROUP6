@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-	
+	<div class="login_form">
 	<h1>Please login:</h1>
 	
 	{{ Form::open(array('action' => 'LoginController@postLogin')) }}
@@ -25,7 +25,7 @@
 		</p>
 	{{ Form::submit('Login') }}
 	{{ Form::close() }}
-
+	</div>
 @endsection
 
 
