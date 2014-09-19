@@ -11,12 +11,12 @@
 	{{ Form::open(array('action' => 'LoginController@postLogin')) }}
     	<p>
     	
-    		UCID:     {{ Form::text('username') }}
+    		<div class="ucid">UCID:</div><div class="input">{{ Form::text('username') }}</div>
     		@if ($errors->has('username'))
     			<spam class="error"> {{ $errors->first('username')}} </spam>
     		@endif    		
     		<br>    		
-    		Password: {{ Form::password('password') }}
+    		<div class="password">Password:</div><div class="input">{{ Form::password('password') }}</div>
     		@if ($errors->has('password'))
     			<spam class="error"> {{ $errors->first('password') }}</spam>
     		@endif

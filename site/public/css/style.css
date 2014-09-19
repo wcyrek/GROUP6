@@ -4,100 +4,166 @@
 	text-decoration: none;
 }
 .badge {
-	width: 80px;
-	height: 80px;
-	line-height: 80px;
-	border-radius: 40px;
-	border: 3px solid grey;
-	text-align: center;
-	display: inline-block;
-	color: white;
-	font-weight: bold;
-	font-family: sans-serif;
-	cursor: pointer;
-	margin: 0;
-	padding: 0;
-	
+	width: 			80px;
+	height: 		80px;
+	line-height: 	80px;
+	border-radius: 	40px;
+	border: 		3px solid grey;
+	text-align: 	center;
+	display: 		inline-block;
+	color: 			white;
+	font-weight: 	bold;
+	font-family: 	sans-serif;
+	cursor: 		pointer;
+	margin: 		0;
+	padding: 		0;
 }
 .badge_caption {
 	cursor: pointer;
 }
-
 .skill_1 {
-	background-color: #457FB5;
-	border-color: #3B6FA0;
-	background-image: url(../img/star_5.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 80px 80px;
-	
+	background-color: 		#457FB5;
+	border-color: 			#3B6FA0;
+	background-image: 		url(../img/star_5.png);
+	background-repeat: 		no-repeat;
+	background-position: 	center;
+	background-size: 		80px 80px;
 }
 .skill_2 {
-	background-color: #B54545;
-	border-color: #A94242;
+	background-color: 		#B54545;
+	border-color: 			#A94242;\
 }
 .skill_3 {
-	background-color: #45B597;
-	border-color: #3C9C82;
+	background-color: 		#45B597;
+	border-color: 			#3C9C82;
 }
 .skill_4 {
-	background-color: #A8B545;
-	border-color: #909B3C;
+	background-color: 		#A8B545;
+	border-color: 			#909B3C;
 }
 .skill_5 {
-	background-color: #AE45B5;
-	border-color: #9B41A1;
+	background-color: 		#AE45B5;
+	border-color: 			#9B41A1;
 }
 .noselect {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	-webkit-touch-callout: 	none;
+	-webkit-user-select: 	none;
+	-khtml-user-select: 	none;
+	-moz-user-select: 		none;
+	-ms-user-select: 		none;
+	user-select: 			none;
 }
-.out_container {
-	background-color : black
+.header_mid {
+	color:4f83bd;
+	padding:10px;
+	padding-top:20px;
+	font-size: 20pt;
+	font-weight: bold;
+	text-align: center;
+	background: white;
+	width: 100%;
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;	
+}
+.header_left {
+	float: left;
+	height: 80px;
+	width: 140px;
+	display: inline-block;
+	-moz-border-radius:10px 10px 10px 10px;
+	-webkit-border-radius:10px 10px 10px 10px;
+	border-radius:10px 10px 10px 10px;
+	background-image: 		url(../img/NJ-Cert_Logo.jpg);
+	background-repeat: 		no-repeat;
+	background-position: 	center;
+	background-size: 		100%;
+	margin-left: 5px;
+}
+.header_right {
+	float: right;
+	height: 80px;
+	width: 140px;
+	display: inline-block;
+	-moz-border-radius:10px 10px 10px 10px;
+	-webkit-border-radius:10px 10px 10px 10px;
+	border-radius:10px 10px 10px 10px;
+	background-image: 		url(../img/NJ-Cert_Logo.jpg);
+	background-repeat: 		no-repeat;
+	background-position: 	center;
+	background-size: 		100%;
+	margin-right: 5px;
 }
 .header {
-	background-color: black; 
-	background-position:relative;
-	color: white;
-	width: auto ; 
-	height:100px ;
-	font-family: Comic Sans MS,Helvetica, Arial, sans-serif;
-	font-size : 45px;
-	font-weight: 900 ;
-	text-align : center;
-	top:0%;
-	left:0%;
-	overflow-x:0px;
+	width: 		900px;
+	height: 	80px;
+	color: 		black;
+	background: white;
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+	clear:both;
+}
+.page {
+	width: 900px;
+	background: #666; 
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	min-height: 80%;
+	background: #333;
+	border: 1px solid 
+	-moz-border-radius:10px 10px 10px 10px;
+	-webkit-border-radius:10px 10px 10px 10px;
+	border-radius:10px 10px 10px 10px;
+	box-shadow:0px 2px 5px #888888;
 }
 .container {
-	width :auto; 
-	height : auto; 
-	padding : none; 
-	margin-left:0px;
-	margin-right:0px; 
+	width: 900px;
+	min-height: 700px;
 }
+.float_right {
+	float:right;
+	}
+.question {
+	width:96%;
+	float: left;
+	background: #eee;
+	padding: 2%;
+	} 
 .login_form {
-	font-family: Comica Sans MS, Helvetica, Arial, sans-serif;
-	font-style: Bold;
-	color: black;
-	font-size : auto;
-	position:absolute;
-	top:45%;
-	left:45%;
-	width:400px;
-	height:200px;
-	z-index:15;
-
-	text-align:center;
-	margin:-100px 0 0 -150px;
-
-	border: thin solid red ;
-	border-width: 3px;">
+	margin: 100px auto; 
+	background: white; 
+	width: 380px; 
+	-moz-border-radius:10px 10px 10px 10px;
+	-webkit-border-radius:10px 10px 10px 10px;
+	border-radius:10px 10px 10px 10px;
+	box-shadow:0px 2px 5px #888888;
+	}
+.ucid div {
+	width: 50px;
+	text-align: right;
+	display: inline-block;
 }
+.password div {
+	width: 50px;
+	text-align: right;
+	display: inline-block;
+}
+.input div {
+	display: inline-block;
+}
+.page_content {
+	margin: 20px auto; 
+	background: white; 
+	width: 70%; 
+	float:left;
+	-moz-border-radius:10px 10px 10px 10px;
+	-webkit-border-radius:10px 10px 10px 10px;
+	border-radius:10px 10px 10px 10px;
+	box-shadow:0px 2px 5px #888888;
+	}
+
 .menu_div {
 	width:200px;
 	float:left;
@@ -105,23 +171,29 @@
 	background: white;
 	-moz-border-radius:10px 10px 10px 10px;
 	-webkit-border-radius:10px 10px 10px 10px;
-	border-radius:10px 10px 10px 10px;box-shadow:0px 2px 5px #888888;
-}
-.menu_div_header{width:192px;
+	border-radius:10px 10px 10px 10px;
+	box-shadow:0px 2px 5px #888888;
+	}
+.menu_div_header {
+	width:192px;
 	float:left;
 	background: #00BFFF;
 	height:30px;
 	font-size: 14px;
-	color:white;padding: 4px ;
+	color:white;
+	padding: 4px ;
 	line-height: 30px;
-}
-.menu_div_content{
+	}
+.menu_div_content {
 	width:200px;
 	float:left;
-	color :black ;
-	font-style:bold;
-}
-.menu_div_content.li{
-	color :black ;
-	font-style:bold;
+	}
+	
+	body {
+
+	background-color: black; 
+    background: url("data:image/png;base64,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") repeat scroll 0px 0px transparent;
+	text-align: center;
+	font-size: 16px;
+	color: rgb(34, 34, 34);
 }

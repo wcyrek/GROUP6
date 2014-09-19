@@ -9,19 +9,24 @@
 		@yield('title')
 	</head>
 	<body>
-		<div class="header" >NJ-Cert Sign In </div>
-		<div class="container"> 
-		@if(Session::has('message'))
-			@if(Session::has('color'))
-			<p style="color: {{ Session::get('color') }}"> 
-			@else
-			<p>
+		<div class="page">
+			<div class="header">	
+				<div class="header_left"></div>
+				<div class="header_right"></div>
+				<div class="header_mid">Student Certification Center</div>
+			</div>
+			<div class="container"> 
+			@if(Session::has('message'))
+				@if(Session::has('color'))
+				<p style="color: {{ Session::get('color') }}"> 
+				@else
+				<p>
+				@endif
+				{{ Session::get('message') }}</p>
 			@endif
-			{{ Session::get('message') }}</p>
-		@endif
-		
-		@yield('content')
-		
+			
+			@yield('content')
+			</div>
 		</div>
 	</body>
 </html>
