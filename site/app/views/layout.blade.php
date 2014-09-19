@@ -1,8 +1,8 @@
 <html>
 	<head>
 		<link rel="icon" type="image/png" href="img/ncert.png" />
-		{{HTML::style('css/style.css')}}
 		{{HTML::style('css/bootstrap.min.css')}}
+		{{HTML::style('css/style.css')}}
 		{{HTML::script('http://code.jquery.com/jquery-latest.min.js') }}
 		{{HTML::script('js/bootstrap.min.js') }}
 		{{HTML::script('js/main.js') }}
