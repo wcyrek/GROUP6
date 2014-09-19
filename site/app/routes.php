@@ -41,3 +41,6 @@ Route::get('admin', array('as'=>'admin', 'uses'=>'AdminController@getIndex'))->b
 Route::get('login', 'LoginController@getLogin')->before('guest');
 Route::post('login', 'LoginController@postLogin')->before('guest');
 Route::get('logout', 'LoginController@getLogout')->before('auth');
+
+//profiles
+Route::get('profile/{id}', 'ProfileController@getProfile');
