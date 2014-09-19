@@ -43,4 +43,4 @@ Route::post('login', 'LoginController@postLogin')->before('guest');
 Route::get('logout', 'LoginController@getLogout')->before('auth');
 
 //profiles
-Route::get('profile/{id}', 'ProfileController@getProfile');
+Route::get('profile/{id}', 'ProfileController@getProfile')->before('guest');
