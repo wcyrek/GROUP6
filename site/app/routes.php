@@ -43,4 +43,5 @@ Route::post('login', 'LoginController@postLogin')->before('guest');
 Route::get('logout', 'LoginController@getLogout')->before('auth');
 
 //profiles
-Route::get('profile/{id}', 'ProfileController@getProfile');
+Route::get('profile/{id}', 		array('as'=> 'profile' , 'uses' => 'ProfileController@getProfile'));
+Route::get('profile/edit', 		array('as'=> 'profile_edit' , 'uses' => 'ProfileController@getEdit'));

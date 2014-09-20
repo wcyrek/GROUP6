@@ -21,7 +21,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	public function skills() 
 	{
-		return $this->belongsToMany('Skill');
+		return $this->belongsToMany('Skill', 'user_skill');
 	}
 
 }

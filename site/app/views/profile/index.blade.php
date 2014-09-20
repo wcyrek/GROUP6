@@ -6,17 +6,21 @@
 </title>
 @endsection
 
-@if(Session::get('level') == 'my')
-	@section('content')
-		var_dump($profile);
-	@endsection
-@else
-	@section('content')
-		{{ 
-			var_dump($profile);
-			
+
+@section('content')
+
+	<h1> {{$profile->ucid }} Profile </h1>
+	<h2> Skills </h2>
+	<ul>
+		@foreach($profile->skills as $skill)
+			<li> {{ $skill->name }} </li>
+		@endforeach
 		
-		 }}
-	@endsection
-@endif
+	</ul>	
+	@if(Session::get('level') == 'my')	
+		{{ HTML::linkRoute('profile_edit', $skill->name, array($skill->id)) }} 
+	@endif		
+	 
+@endsection
+
 

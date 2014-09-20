@@ -22,4 +22,9 @@ class ProfileController extends BaseController {
 			return View::make('profile.index')->with('level', 'read')->with('profile', $profile);
 		} 
 	}
+	
+	function getEdit($profile){
+		
+		
+	}
 }
