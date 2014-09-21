@@ -6,7 +6,8 @@ class ProfileController extends BaseController {
 		
 		if(is_null($profile)){
 			//no such an user (404)
-			Redirect::to('/');
+			//App::abort(404);
+			return Redirect::to('/');
 		}
 		if(!Auth::check()){
 			
@@ -23,8 +24,30 @@ class ProfileController extends BaseController {
 		} 
 	}
 	
-	function getEdit($profile){
+	function getEditAbout($id){
+		$profile = User::find($id);
+		$user = Auth::user();
 		
+		if(is_null($profile)){
+			//no such an user (404)
+			//App::abort(404);
+			return Redirect::to('/');
+		}
+						
+		return View::make('profile.about')->with('level', 'my')->with('profile', $profile);
+	
+	}
+	function getEditSkills($id){
+		$profile = User::find($id);
+		$user = Auth::user();
 		
+		if(is_null($profile)){
+			//no such an user (404)
+			//App::abort(404);
+			return Redirect::to('/');
+		}
+		
+		return View::make('profile.about')->with('level', 'my')->with('profile', $profile);
+	
 	}
 }
