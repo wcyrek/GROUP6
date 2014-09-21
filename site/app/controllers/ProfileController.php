@@ -33,8 +33,14 @@ class ProfileController extends BaseController {
 			//App::abort(404);
 			return Redirect::to('/');
 		}
-						
-		return View::make('profile.about')->with('level', 'my')->with('profile', $profile);
+		if($user->id === $id)
+		{				
+			return View::make('profile.about')->with('level', 'my')->with('profile', $profile);
+		}
+		else{
+			return View::make('profile.about')->with('level', 'readonly')->with('profile', $profile);
+				
+		}
 	
 	}
 	function getEditSkills($id){
@@ -49,5 +55,14 @@ class ProfileController extends BaseController {
 		
 		return View::make('profile.about')->with('level', 'my')->with('profile', $profile);
 	
+	}
+	
+	
+	function postEditAbout(){
+		
+	}
+	function postEditSkills(){
+		
+		
 	}
 }
