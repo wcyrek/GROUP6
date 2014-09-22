@@ -151,6 +151,9 @@ class PopulateSomeSkills extends Migration {
 	public function down()
 	{
 		DB::table('skill_types')->where('name', '=', 'Programming')->delete();
+		DB::table('skill_types')->where('name', '=', 'Communications')->delete();
+		DB::table('skill_types')->where('name', '=', 'Databases')->delete();
+		DB::table('skill_types')->where('name', '=', 'Frameworks')->delete();
 	}
 
 }
