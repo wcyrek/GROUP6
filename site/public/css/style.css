@@ -3,6 +3,8 @@
 	width:48%;
 	height:400px;
 	overflow:auto;
+	border:solid gray 1px;
+	padding:10;
 	
 }
 
