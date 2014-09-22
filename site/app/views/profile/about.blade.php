@@ -28,6 +28,8 @@
 
 {{ Form::close() }}		
 	 
+{{ HTML::linkAction('ProfileController@getProfile', 'back to profile page', array('id' => $profile->id)) }}
+
 @endsection
 
 
