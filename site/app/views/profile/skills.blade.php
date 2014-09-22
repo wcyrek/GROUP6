@@ -26,7 +26,9 @@
 	<li> 
 	{{ Form::open(array('action' => array('ProfileController@deleteSkill', $profile->id ))) }}
 	{{ Form::label($skill->name)  }} 
-	{{ Form::submit('DELETE') }}
+	<i>
+		{{ Form::button(null,array('type'=>'submit', 'class'=>'icon-trash')) }}
+	</i>
 	{{ Form::close() }}
 	</li>
 @endforeach

@@ -1,5 +1,17 @@
 @CHARSET "ISO-8859-1";
 
+.icon-trash{
+
+	background-image: url(../img/trash_bin.png);
+	background-repeat:	no-repeat;
+	background-color:	transparent;
+	height:	40px;
+	width: 66px;
+	border:	none;
+	background-size:auto 100%;
+	text-indent: -999em;
+}
+
 #badges a {
 	text-decoration: none;
 }
