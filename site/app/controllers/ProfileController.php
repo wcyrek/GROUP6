@@ -82,12 +82,12 @@ class ProfileController extends BaseController {
 		
 		$user->skills()->attach(Input::get('type_id'));
 		
-		return Redirect::route('profile', array('id' => $id));
+		return Redirect::route('profile_edit_skills', array('id' => $id));
 	}
 	
 	function deleteSkill($id){
 		$user = User::find($id);
 		$user->skills()->detach(Input::get('skill'));
-		return Redirect::route('profile', array('id' => $id));
+		return Redirect::route('profile_edit_skills', array('id' => $id));
 	}
 }
