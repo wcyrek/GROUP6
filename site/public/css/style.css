@@ -257,6 +257,7 @@
 }
 #Menu li:hover {
 	text-decoration: underline;
+	background-color: orange;
 }
 .first {
 	cursor: default;

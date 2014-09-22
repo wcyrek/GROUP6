@@ -45,6 +45,24 @@ class PopulateSomeSkills extends Migration {
 			'created_at' 	=> $now,
 			'updated_at' 	=> $now
 		));
+		
+		$id = DB::table('skill_types')->insertGetId(array(
+				'name'=>'Communications'
+		));
+		
+		DB::table('skills')->insert(array(
+			'name'			=> 'Report Writing',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+		
+		DB::table('skills')->insert(array(
+			'name'			=> 'Python',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
 	}
 
 	/**
