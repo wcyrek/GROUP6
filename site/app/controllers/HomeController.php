@@ -26,5 +26,17 @@ class HomeController extends BaseController {
 		}
 		return Redirect::to('/profile/'.$user->id);
 	}
+	
+	public function about() {
+	
+		if (!Auth::check()) {
+			return Redirect::to('/login');
+		}
+		$user = Auth::user();
+		if($user->admin) {
+			return Redirect::to('/admin');
+		}
+		return Redirect::to('/profile/'.$user->id);
+	}
 
 }
