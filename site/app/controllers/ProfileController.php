@@ -46,17 +46,23 @@ class ProfileController extends BaseController {
 	function getEditSkills($id){
 		$profile = User::find($id);
 		$user = Auth::user();
-		
 		if(is_null($profile)){
 			//no such an user (404)
 			//App::abort(404);
 			return Redirect::to('/');
 		}
+		foreach(Skill::all() as $skill){
+			$skills[$skill->id] = $skill->name;
+		}
+		return View::make('profile.skills')->with(array('level'=>'my', 'profile'=> $profile, 'skills'=>$skills));
 		
-		return View::make('profile.about')->with('level', 'my')->with('profile', $profile);
+		//->with('level', 'my')->with('profile', $profile);
 	
 	}
 	
+	function deleteSkill(){
+		
+	}
 	
 	function postEditAbout($id){
 		
@@ -72,8 +78,13 @@ class ProfileController extends BaseController {
 		
 		return Redirect::route('profile', array('id' => $id));
 	}
-	function postEditSkills(){
+	
+	function postEditSkills($id){
 		
+		$user = User::find($id);
 		
+		$user->skills()->attach(Input::get('type_id'));
+		
+		return Redirect::route('profile', array('id' => $id));
 	}
 }

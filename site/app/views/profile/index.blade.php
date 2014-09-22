@@ -42,9 +42,10 @@
 	
 	<h2 style="display:inline;"> Skills </h2>
 	@if($level == 'my')	
-		<a>Edit</a>
-	@endif
-	
+		{{ HTML::linkAction('ProfileController@getEditSkills', 'edit', array('id' => $profile->id)) }}
+		
+	@endif	
+		
 	<ul>
 		@foreach($profile->skills as $skill)
 			<li> {{ $skill->name }} </li>
