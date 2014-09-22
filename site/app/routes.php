@@ -12,17 +12,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function()
-{
-	if (!Auth::check()) {
-		return Redirect::to('/login');
-	}
-	$user = Auth::user();
-	if($user->admin) {
-		return Redirect::to('/admin');
-	}
-	return Redirect::to('/profile/'.$user->id);
-});
+Route::get('/', array('as'=>'home',	'uses'=>'HomeController@home'));
 Route::get('users', function()
 {
 	return 'Users!';
