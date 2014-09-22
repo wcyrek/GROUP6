@@ -15,8 +15,8 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function home()
-	{
+	public function home() {
+		
 		if (!Auth::check()) {
 			return Redirect::to('/login');
 		}
