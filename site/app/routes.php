@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -13,7 +14,14 @@
 
 Route::get('/', function()
 {
-	return 'hi';
+	if (!Auth::check()) {
+		return Redirect::to('/login');
+	}
+	$user = Auth::user();
+	if($user->admin) {
+		return Redirect::to('/admin');
+	}
+	return Redirect::to('/profile/'.$user->id);
 });
 Route::get('users', function()
 {
@@ -43,6 +51,6 @@ Route::post('login', 'LoginController@postLogin')->before('guest');
 Route::get('logout', 'LoginController@getLogout')->before('auth');
 
 //profiles
-Route::get('profile/{id}', 		array('as'=> 'profile' , 'uses' => 'ProfileController@getProfile'));
+Route::get('profile/{id}', 				array('as'=> 'profile' , 'uses' => 'ProfileController@getProfile'));
 Route::get('profile/{id}/about', 		array('as'=> 'profile_edit' , 'uses' => 'ProfileController@getEditAbout'))->before('auth');
 Route::get('profile/{id}/skills', 		array('as'=> 'profile_edit' , 'uses' => 'ProfileController@getEditSkills'))->before('auth');
