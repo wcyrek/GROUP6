@@ -45,4 +45,4 @@ Route::get(		'profile/{id}/skills',   array('as'=> 'profile_skills' , 		'uses'=>
 Route::post(	'profile/{id}/about', 	 array('as'=> 'profile_edit_about' , 	'uses'=>'ProfileController@postEditAbout'))->before('auth');
 Route::post(	'profile/{id}/skills', 	 array('as'=> 'profile_edit_skills', 	'uses'=>'ProfileController@postEditSkills'))->before('auth');
 Route::get(		'users', 				 array('as'=> 'users', 					'uses'=>'ProfileController@getUsers'))->before('auth');
-Route::get(		'profile/{id}/delSkill', array('as'=> 'delete', 				'uses'=>'ProfileController@deleteSkill'))->before('auth');
+Route::post(	'profile/{id}/delSkill', array('as'=> 'delete', 				'uses'=>'ProfileController@deleteSkill'))->before('auth');

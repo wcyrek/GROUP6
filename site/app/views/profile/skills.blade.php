@@ -25,9 +25,10 @@
 @foreach($profile->skills as $skill)
 	<li> 
 	{{ Form::open(array('action' => array('ProfileController@deleteSkill', $profile->id ))) }}
+	{{ Form::hidden('skill', $skill->id) }}
 	{{ Form::label($skill->name)  }} 
 	<i>
-		{{ Form::button(null,array('type'=>'submit', 'class'=>'icon-trash')) }}
+			{{ Form::button(null,array('type'=>'submit', 'class'=>'icon-trash')) }}
 	</i>
 	{{ Form::close() }}
 	</li>
