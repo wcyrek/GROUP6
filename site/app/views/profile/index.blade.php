@@ -8,13 +8,7 @@
 
 
 @section('content')
-	<h1>Profile for user {{$profile->ucid }}</h1>
-	<h3 style="display:inline;"> About:</h3> 
-	@if($level == 'my')	
-		{{ HTML::linkAction('ProfileController@getEditAbout', 'edit', array('id' => $profile->id)) }}
-		
-	@endif		
-	
+	<h2>Profile for user {{$profile->ucid }}</h2>	
 	<table>
 	@if(!empty($profile->first_name))
 		<tr><td class="right">First name:</td><td>{{ $profile->first_name }}</td></tr>
@@ -34,6 +28,9 @@
 	@if(!empty($profile->phone))
 		<tr><td Sclass="right">Phone:</td><td>{{ $profile->phone }}</td></tr>
 	@endif
+	@if($level == 'my')	
+		<tr><td>{{ HTML::linkAction('ProfileController@getEditAbout', 'edit', array('id' => $profile->id)) }}</td></tr>	
+	@endif	
 	</table>
 	
 	<h3 style="display:inline-block; padding-top: 10px">Skills:</h3>

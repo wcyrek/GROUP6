@@ -307,3 +307,10 @@ td {
 table {
 	margin-bottom: 2px;
 }
+.users tr {
+	height: 20px;
+	width: 100%;
+}
+.users tr:hover {
+	background-color: orange;
+}

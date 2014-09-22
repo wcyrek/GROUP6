@@ -7,7 +7,7 @@
 @section('content')
 	<table class="users">
 	@foreach($users as $user)
-		<tr><td>{{$user->email}}</td><td>{{$user->firstName}} {{$user->lastName}}</td></tr>
+		<tr><td><a href="./profile/{{$user->id}}">{{$user->email}}</a></td><td>{{$user->firstName}} {{$user->lastName}}</td></tr></a>
 	@endforeach
 	</table>
 @endsection
