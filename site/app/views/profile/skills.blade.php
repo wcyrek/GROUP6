@@ -23,7 +23,12 @@
 <h2> Your skills: </h2>
 <ul>
 @foreach($profile->skills as $skill)
-	<li> {{ $skill->name  }} </li>
+	<li> 
+	{{ Form::open(array('action' => array('ProfileController@deleteSkill', $profile->id ))) }}
+	{{ Form::label($skill->name)  }} 
+	{{ Form::submit('DELETE') }}
+	{{ Form::close() }}
+	</li>
 @endforeach
 </ul>
 
