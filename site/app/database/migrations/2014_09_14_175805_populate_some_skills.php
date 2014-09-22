@@ -46,6 +46,34 @@ class PopulateSomeSkills extends Migration {
 			'updated_at' 	=> $now
 		));
 		
+		DB::table('skills')->insert(array(
+			'name'			=> 'C#',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+		
+		DB::table('skills')->insert(array(
+			'name'			=> 'Visual Basic',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+
+		DB::table('skills')->insert(array(
+			'name'			=> 'C',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+
+		DB::table('skills')->insert(array(
+			'name'			=> 'Assembly',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+		
 		$id = DB::table('skill_types')->insertGetId(array(
 				'name'=>'Communications'
 		));
@@ -58,7 +86,57 @@ class PopulateSomeSkills extends Migration {
 		));
 		
 		DB::table('skills')->insert(array(
-			'name'			=> 'Python',
+			'name'			=> 'Public Speaking',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+		
+		$id = DB::table('skill_types')->insertGetId(array(
+				'name'=>'Databases'
+		));
+		
+		DB::table('skills')->insert(array(
+			'name'			=> 'SQL',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+		
+		DB::table('skills')->insert(array(
+			'name'			=> 'MySQL',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+		
+		DB::table('skills')->insert(array(
+			'name'			=> 'OracleDB',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+		
+		$id = DB::table('skill_types')->insertGetId(array(
+				'name'=>'Frameworks'
+		));
+		
+		DB::table('skills')->insert(array(
+			'name'			=> 'Grails',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+		
+		DB::table('skills')->insert(array(
+			'name'			=> 'Laravel',
+			'type_id'		=> $id,
+			'created_at' 	=> $now,
+			'updated_at' 	=> $now
+		));
+		
+		DB::table('skills')->insert(array(
+			'name'			=> 'Spring',
 			'type_id'		=> $id,
 			'created_at' 	=> $now,
 			'updated_at' 	=> $now
