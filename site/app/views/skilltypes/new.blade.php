@@ -3,7 +3,9 @@
 @section('title')
 	<title>New Skill Type</title>
 @endsection
-
+@section('menu')
+	@include('menu')
+@endsection
 @section('content')
 	<h1>Create a new skill type!</h1>
 

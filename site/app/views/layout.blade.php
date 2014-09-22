@@ -15,6 +15,9 @@
 				<div class="header_right"></div>
 				<div class="header_mid">Student Certification Center</div>
 			</div>
+			<div class="menu">
+			@include('menu')
+			</div>
 			<div class="container"> 
 			@if(Session::has('message'))
 				@if(Session::has('color'))

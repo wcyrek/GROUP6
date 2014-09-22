@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-	<h1>Please pick action:</h1>
 
 	<ul>
 		<li>{{ HTML::linkRoute('skills', "Update Skills") }} </li>

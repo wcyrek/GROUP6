@@ -3,7 +3,9 @@
 @section('title')
 	<title>{{ $skilltype->name }} Skill Type</title>
 @endsection
-
+@section('menu')
+	@include('menu')
+@endsection
 @section('content')
 	<h1>This is the view of {{ $skilltype->name }} skilltypes:</h1>
 	<p><b>Name:</b> {{ $skilltype->name }} </p><br>
