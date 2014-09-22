@@ -5,23 +5,21 @@
 @endsection
 
 @section('content')
-	<h1>This is the view of {{ $skill->name }} skills:</h1>
-	<p><b>Name:</b> {{ $skill->name }} 
-	<b>Skill Type:</b> {{ HTML::linkRoute('skilltype', $skilltype->name, array($skilltype->id)) }}</p>
-	<p>
-	{{ Form::open(array('url' => 'skills/destroy', 'method' => 'DELETE', 'style' => 'display: inline;')) }}
-	{{ Form::hidden('id', $skill->id) }}
-	{{ Form::submit('Delete') }}
-	{{ Form::close() }}
-	{{ HTML::linkRoute('skills', 'Back to list') }}
-	</p>
-	<small>Created_at: {{ $skill->created_at }}</small>
-	<small>Updated_at: {{ $skill->updated_at }}</small>
-	<br />
-	<br />
+
+	<h2>
+	@if (Auth::user()->admin)
+	[{{ HTML::linkAction('SkillsController@deleteSkill', 'X', array('id' => $skill->id)) }}] 
+	@endif
+	{{ $skill->name }} ({{ HTML::linkRoute('skilltype', $skilltype->name, array($skilltype->id)) }}):</h2>
+	<div id="badges">
+		<div id="{{ $skill->id }}" class="noselect badge skill_{{ $skill->id%5+1 }}">
+			<label class="badge_caption">{{ $skill->name }}</label>
+		</div>
+	</div>
+	<br>
 	<p><b>Users with this skill:<br /></b>
 	@foreach($users as $user)
-	 {{ $user->first_name }}, {{ $user->last_name }} <br /> </p>
+		{{ HTML::linkRoute('profile', $user->first_name.' '.$user->last_name, array($user->id)) }}<br>
 	@endforeach
 @endsection
 

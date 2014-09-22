@@ -7,13 +7,7 @@
 	@include('menu')
 @endsection
 @section('content')
-	<h1>This is the view of {{ $skilltype->name }} skilltypes:</h1>
-	<p><b>Name:</b> {{ $skilltype->name }} </p><br>
-		{{ Form::open(array('url' => 'skilltypes/destroy', 'method' => 'DELETE', 'style' => 'display: inline;')) }}
-		{{ Form::hidden('id', $skilltype->id) }}
-		{{ Form::submit('Delete') }}
-		{{ Form::close() }}
-	<h2>Skills belonging to this type:</h2>
+	<h2>{{ $skilltype->name }}:</h2>
 	<div id="badges">
 	@foreach($skills as $skill)
 	<a href="../skill/{{ $skill->id }}">
@@ -23,7 +17,9 @@
 	</a>
 	@endforeach
 	</div>
-	<p>{{ HTML::linkRoute('skilltypes', 'Back to skilltypes') }}</p>
-	<p>{{ HTML::linkRoute('admin', 'Back to Admin menu') }}</p>
+	{{ Form::open(array('url' => 'skilltypes/destroy', 'method' => 'DELETE', 'style' => 'display: inline;')) }}
+	{{ Form::hidden('id', $skilltype->id) }}
+	{{ Form::submit('Delete') }}
+	{{ Form::close() }}
 @endsection
 

@@ -11,7 +11,9 @@
 		<li>{{ HTML::linkRoute('skilltype', $skilltype->name, array($skilltype->id)) }}</li>
 	@endforeach
 	</ul>
-	<p>{{ HTML::linkRoute('new_skilltype', 'Add a skill type') }}</p>
-	<p>{{ HTML::linkRoute('admin', 'Back to Admin menu') }}</p>
+	{{ Form::open(array('url' => 'skilltypes/new', 'method' => 'POST'))}}
+	{{ Form::label('name', 'Skill Type Name:') }} {{ Form::text('name') }}
+	{{ Form::submit('Add skill type') }}
+	{{ Form::close() }}
 @endsection
 

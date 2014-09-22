@@ -8,7 +8,11 @@ class SkillsController extends BaseController {
 	 * Default action display list of all skills
 	 */
 	public function getIndex() {
-		return View::make('skills.index')->with('skills', Skill::all());
+		$skilltypes = array();
+		foreach (SkillType::all() as $skill) {
+			$skilltypes[$skill->id] = $skill->name;
+		}
+		return View::make('skills.index')->with('skills', Skill::all())->with('skilltypes', $skilltypes);
 	}
 	
 	/**

@@ -16,6 +16,5 @@
 	</p>
 	{{ Form::submit('Add skill type') }}
 	{{ Form::close() }}
-	<br>{{ HTML::linkRoute('skilltypes', 'Back to skilltypes') }}
 @endsection
 
