@@ -9,9 +9,9 @@
 
 @section('content')
 
-{{ Form::open(array('action' => 'ProfileController@postEditAbout', 'class' => 'about-form')) }}
+{{ Form::open(array('action' => array('ProfileController@postEditAbout', $profile->id ), 'class' => 'about-form')) }}
 
-{{ Form::hidden('id', $profile->id) }}
+
 {{ Form::label('first_name', 'First name: ' ) }}
 {{ Form::text('first_name', $profile->first_name) }} <br>
 {{ Form::label('middle_name', 'Middle name: ' ) }}
