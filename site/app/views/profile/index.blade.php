@@ -11,8 +11,8 @@
 	<h1> {{$profile->ucid }} Profile </h1>
 	<h2 style="display:inline;"> About </h2> 
 	@if($level == 'my')	
-		{{ HTML::linkAction('ProfileController@getEditAbout', 'ediiit', array('id' => $profile->id)) }}
-		<a>Edit</a>
+		{{ HTML::linkAction('ProfileController@getEditAbout', 'edit', array('id' => $profile->id)) }}
+		
 	@endif		
 	
 	<ul>

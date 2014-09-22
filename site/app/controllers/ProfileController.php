@@ -60,6 +60,18 @@ class ProfileController extends BaseController {
 	
 	function postEditAbout(){
 		
+		$user = User::find(Input::get('id'));
+		//return var_dump(Input::get('id'));
+		$user->first_name = Input::get('first_name');
+		$user->middle_name = Input::get('middle_name');
+		$user->last_name = Input::get('last_name');
+		$user->email = Input::get('email');
+		$user->address = Input::get('address');
+		$user->phone = Input::get('phone');
+		
+		$user->save();
+		
+		return Redirect::route('profile', array('id' => Input::get('id')));
 	}
 	function postEditSkills(){
 		

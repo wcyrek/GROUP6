@@ -24,7 +24,7 @@ class LoginController extends BaseController{
 		if(Bounce::isNJIT($ucid, $pass)){
 			$user = User::where('ucid',$ucid)->first();
 			if(is_null($user)){
-				//TODO:redirect to register form flshing ucid
+				//TODO:redirect to register form flashing ucid
 				Register::createUser($ucid);
 				$user = User::where('ucid',$ucid)->first();
 			}
