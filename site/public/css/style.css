@@ -198,13 +198,13 @@
 	color: white;
 }
 			
-ul {
+#Menu ul {
 	text-align: center;
 	padding-top: 10px;
 	margin: 0;
 }
 
-li {
+#Menu li {
 	display: inline;
 	padding: 10px;
 	color: white;
@@ -213,7 +213,7 @@ li {
 	border-left: solid 1px silver;
 	cursor: pointer;
 }
-li:hover {
+#Menu li:hover {
 	text-decoration: underline;
 }
 .first {
