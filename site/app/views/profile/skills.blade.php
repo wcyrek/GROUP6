@@ -10,7 +10,7 @@
 @section('content')
 
 {{ Form::open(array('action' => array('ProfileController@postEditSkills', $profile->id ),
-	 'class' => 'skills-form', 'id'=>'form_select')) }}
+	 'class' => 'skills-form', 'id'=>'form_select', 'style' => 'display:none')) }}
 
 
 <br>
