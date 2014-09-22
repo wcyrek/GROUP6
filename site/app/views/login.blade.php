@@ -5,25 +5,20 @@
 @endsection
 
 @section('content')
-	<div class="login_form">
-	<h1>Please login:</h1>
-	
+	<div class="login_form padding_20">
+	<h3>Please Login</h3>
 	{{ Form::open(array('action' => 'LoginController@postLogin')) }}
-    	<p>
-    	
-    		<div class="ucid">UCID:</div><div class="input">{{ Form::text('username') }}</div>
+    	<table class="full">
+    		<tr><td class="right fifty">UCID:</td><td>{{ Form::text('username') }}</td></tr>
     		@if ($errors->has('username'))
-    			<spam class="error"> {{ $errors->first('username')}} </spam>
-    		@endif    		
-    		<br>    		
-    		<div class="password">Password:</div><div class="input">{{ Form::password('password') }}</div>
+    			</table><div class="full error center"> {{ $errors->first('username')}} </div><table class="full">
+    		@endif   		 		
+    		<tr><td class="right fifty">Password:</td><td>{{ Form::password('password') }}</td></tr>
     		@if ($errors->has('password'))
-    			<spam class="error"> {{ $errors->first('password') }}</spam>
+    			</table><div class=" full error center">{{ $errors->first('password') }}</div><table class="full">
     		@endif
-    		
-			
-		</p>
-	{{ Form::submit('Login') }}
+			<tr><td></td><td class="right">{{ Form::submit('Login') }}</td></tr>
+		</table>
 	{{ Form::close() }}
 	</div>
 @endsection
