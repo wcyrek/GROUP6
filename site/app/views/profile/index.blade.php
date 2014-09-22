@@ -8,51 +8,47 @@
 
 
 @section('content')
-	<h1> {{$profile->ucid }} Profile </h1>
-	<h2 style="display:inline;"> About </h2> 
+	<h1>Profile for user {{$profile->ucid }}</h1>
+	<h3 style="display:inline;"> About:</h3> 
 	@if($level == 'my')	
 		{{ HTML::linkAction('ProfileController@getEditAbout', 'edit', array('id' => $profile->id)) }}
 		
 	@endif		
 	
-	<ul>
-	
+	<table>
 	@if(!empty($profile->first_name))
-		<li> {{ $profile->first_name }} </li>
-		@if(!empty($profile->middle_name))
-			<li> {{ $profile->middle_name }} </li>
-		@endif
-		@if(!empty($profile->last_name))
-			<li> {{ $profile->last_name }} </li>
-		@endif
+		<tr><td class="right">First name:</td><td>{{ $profile->first_name }}</td></tr>
 	@endif
-	
+	@if(!empty($profile->middle_name))
+		<tr><td class="right">Middle name:</td><td>{{ $profile->middle_name }}</td></tr>
+	@endif
+	@if(!empty($profile->last_name))
+		<tr><td class="right">Last Name:</td><td>{{ $profile->last_name }}</td></tr>
+	@endif
 	@if(!empty($profile->email))
-			<li> {{ $profile->email }} </li>
+		<tr><td class="right">Email:</td><td>{{ $profile->email }}</td></tr>
 	@endif
-	
 	@if(!empty($profile->address))
-			<li> {{ $profile->address }} </li>
+		<tr><td>Address:</td><td>{{ $profile->address }}</td></tr>
 	@endif
-	
 	@if(!empty($profile->phone))
-			<li> {{ $profile->phone }} </li>
+		<tr><td Sclass="right">Phone:</td><td>{{ $profile->phone }}</td></tr>
 	@endif
-	</ul>
+	</table>
 	
-	<h2 style="display:inline;"> Skills </h2>
+	<h3 style="display:inline-block; padding-top: 10px">Skills:</h3>
 	@if($level == 'my')	
 		{{ HTML::linkAction('ProfileController@getEditSkills', 'edit', array('id' => $profile->id)) }}
 		
 	@endif	
 		
-	<ul>
-		@foreach($profile->skills as $skill)
-			<li> {{ $skill->name }} </li>
-		@endforeach
-		
-	</ul>	
-			
+	<div id="badges">
+	@foreach($profile->skills as $skill)
+		<div id="{{ $skill->id }}" class="noselect badge skill_{{ $skill->id%5+1 }}">
+			<label class="badge_caption">{{ $skill->name }}</label>
+		</div>
+	@endforeach
+	</div>
 	 
 @endsection
 
