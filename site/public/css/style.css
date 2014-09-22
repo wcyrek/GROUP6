@@ -1,5 +1,7 @@
 @CHARSET "ISO-8859-1";
 .skill_overflow{
+	width:48%;
+	height:400px;
 	overflow:scroll;
 	
 }
