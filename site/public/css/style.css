@@ -1,5 +1,13 @@
 @CHARSET "ISO-8859-1";
+.skill_overflow{
+	overflow:scroll;
+	
+}
 
+.drag_badge{
+	margin:3;
+	
+}
 .icon-trash{
 
 	background-image: url(../img/trash_bin.png);
