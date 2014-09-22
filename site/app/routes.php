@@ -44,5 +44,8 @@ Route::get('logout', 'LoginController@getLogout')->before('auth');
 
 //profiles
 Route::get('profile/{id}', 		array('as'=> 'profile' , 'uses' => 'ProfileController@getProfile'));
-Route::get('profile/{id}/about', 		array('as'=> 'profile_edit' , 'uses' => 'ProfileController@getEditAbout'))->before('auth');
-Route::get('profile/{id}/skills', 		array('as'=> 'profile_edit' , 'uses' => 'ProfileController@getEditSkills'))->before('auth');
+Route::get('profile/{id}/about', 		array('as'=> 'profile_about' , 'uses' => 'ProfileController@getEditAbout'))->before('auth');
+Route::get('profile/{id}/skills', 		array('as'=> 'profile_skills' , 'uses' => 'ProfileController@getEditSkills'))->before('auth');
+Route::post('profile/{id}/about', 		array('as'=> 'profile_edit_about' , 'uses' => 'ProfileController@postEditAbout'))->before('auth');
+Route::post('profile/{id}/skills', 		array('as'=> 'profile_edit_skills' , 'uses' => 'ProfileController@postEditSkills'))->before('auth');
+
