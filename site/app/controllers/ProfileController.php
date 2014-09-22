@@ -60,6 +60,14 @@ class ProfileController extends BaseController {
 	
 	}
 	
+	function getUsers() {
+		
+		$users = User::all();
+		if (Auth::user()->admin) {
+			return View::make('admin.users')->with('users', $users);
+		}
+		return View::make('profile.users')->with('users', $users);
+	}
 	
 	function postEditAbout($id){
 		

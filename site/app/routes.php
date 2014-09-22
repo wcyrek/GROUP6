@@ -31,7 +31,7 @@ Route::post(	'skilltypes/new', 		 array('as'=>'create_skilltype', 		'uses'=>'Ski
 Route::delete(	'skilltypes/destroy', 	 array('as'=>'delete_skilltype', 		'uses'=>'SkillTypesController@deleteSkill'))->before('admin');
 
 //Admin
-Route::get(		'admin', 				 array('as'=>'admin', 					'uses'=>'AdminController@getIndex'))->before('admin');
+Route::get(		'admin', 				 array('as'=>'admin', 					'uses'=>'ProfileController@getUsers'))->before('admin');
 
 //Login
 Route::get(		'login', 														'LoginController@getLogin')->before('guest');
