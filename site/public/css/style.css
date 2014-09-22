@@ -2,7 +2,7 @@
 .skill_overflow{
 	width:48%;
 	height:400px;
-	overflow:scroll;
+	overflow:auto;
 	
 }
 

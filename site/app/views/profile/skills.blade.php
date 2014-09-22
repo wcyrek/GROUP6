@@ -27,7 +27,7 @@
 		@foreach($profile->skills as $skill)
 			<div id="{{ $skill->id }}" class="drag_badge noselect badge skill_{{ $skill->id%5+1 }}" draggable="true" ondragstart="drag(event)">
 				<label class="badge_caption">{{ $skill->name }}</label>
-			</div><br>
+			</div>
 		@endforeach
 	</div>
 </div>
@@ -37,7 +37,7 @@
 		@foreach($skills as $key=>$val)
 			<div id="{{ $key }}" class="drag_badge noselect badge skill_{{ $key%5+1 }}" draggable="true" ondragstart="drag(event)">
 				<label class="badge_caption">{{ $val}}</label>
-			</div><br>			
+			</div>		
 		@endforeach
 	</div>
 </div>
