@@ -23,10 +23,10 @@
 		<tr><td class="right">Email:</td><td>{{ $profile->email }}</td></tr>
 	@endif
 	@if(!empty($profile->address))
-		<tr><td>Address:</td><td>{{ $profile->address }}</td></tr>
+		<tr><td class="right">Address:</td><td>{{ $profile->address }}</td></tr>
 	@endif
 	@if(!empty($profile->phone))
-		<tr><td Sclass="right">Phone:</td><td>{{ $profile->phone }}</td></tr>
+		<tr><td class="right">Phone:</td><td>{{ $profile->phone }}</td></tr>
 	@endif
 	@if($level == 'my')	
 		<tr><td>{{ HTML::linkAction('ProfileController@getEditAbout', 'edit', array('id' => $profile->id)) }}</td></tr>	
